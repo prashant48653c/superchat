@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        second: "var(--secondary)",
+
         lightblue: '#f0f8ff',   // Alice Blue
         lightgoldenrod: '#fafad2', // Light Goldenrod Yellow
         lightcyan: '#e0ffff',    // Light Cyan

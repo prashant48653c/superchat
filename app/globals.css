@@ -3,10 +3,13 @@
 @tailwind utilities;
  
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
- 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --secondary:#e6e8ff;
+  --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 
@@ -14,7 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", Sans-serif;
   font-size: 1.3rem;
 }
 
@@ -24,11 +27,28 @@ html {
 }
 body{
   overflow-x: hidden;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  
+  
+}
+
+.btn{
+  display: flex;
   justify-content: center;
-  border:10px solid #ec3d3d;
+  align-items: center;
+  padding: 1.2rem 3.3rem ;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  transition: all .3s linear;
+  border: .1px solid transparent;
+}
+.btn:hover{
+  scale: 1.3;
+  border: .1px solid white;
+  box-shadow: var(--shadow);
 }
