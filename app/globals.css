@@ -52,3 +52,12 @@ body{
   border: .1px solid white;
   box-shadow: var(--shadow);
 }
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading{
+  font-size: 3.3rem;
+  font-weight: 600;
+  padding: 1.5rem 0;
+}

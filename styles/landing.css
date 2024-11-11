@@ -82,7 +82,7 @@ border-radius: 1rem;
 
 /* Navbar css  */
 .nav{
-    padding : 1rem 3rem;
+    padding : 2rem 3rem;
     box-shadow: var(--shadow);
     background-color: hsl(0, 33%, 99%);
 }
@@ -101,6 +101,7 @@ border-radius: 1rem;
 
 /* footer css  */
 .footer{
+    border-radius: 4rem 5rem 0rem 0;
     padding: 2rem ;
     background-color: rgb(15, 14, 14);
 }
@@ -122,3 +123,30 @@ cursor: pointer;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
  
+
+/* Why section  */
+.why p {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.why b{
+    font-size: 1.7rem;
+
+}
+.why{
+    padding-top: 5rem;
+}
+.why-boxs{
+    padding: 4rem 0;
+}
+.why h6{
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+.why-box p{
+    color: #716f6f;
+    font-size: 1.5rem;
+    padding: 1.6rem 0;
+    text-align:center;
+}
