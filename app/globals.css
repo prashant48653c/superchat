@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
  
+@import url('https://fonts.cdnfonts.com/css/general-sans');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
@@ -10,6 +11,11 @@
   --foreground: #171717;
   --secondary:#e6e8ff;
   --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  --lightBlack:#1a1a1a;
+  --darkBlack:#000001;
+  --hoverBlack:#303030;
+  
+
 }
 
 
@@ -32,8 +38,8 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  
+  position: relative;
+  /* background-color: var(--darkBlack); */
   
 }
 
@@ -61,3 +67,31 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 600;
   padding: 1.5rem 0;
 }
+.pp{
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 111rem;
+}
+
+/* Scroll bar setting  */
+/* Scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust width for vertical scrollbar */
+  height: 8px; /* Adjust height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000; /* Color of the scroll thumb */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid #f1f1f1; /* Adfds a border to give space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333; /* Darker color on hover */
+}
+
+ 

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { FiExternalLink } from 'react-icons/fi'
@@ -42,9 +43,10 @@ const Footer = () => {
                     You can reach to the developer with the social handles listed below. 
                 </p>
                 <li className='flex gap-10 items-center justify-start f-icons'>
-                    <FaFacebook color='white' size={22}/>
-                    <FaLinkedin color='white' size={22}/>
-                    <FaGithub color='white' size={22}/>
+                   <Link target='_blank' href={'https://www.facebook.com/prashant.acharya.28'} ><FaFacebook color='white' size={22}/></Link>
+                    
+                   <Link target='_blank' href={'https://www.linkedin.com/in/prashant-acharya1/'} ><FaLinkedin color='white' size={22}/></Link>
+                   <Link target='_blank' href={'https://github.com/prashant48653c'} ><FaGithub color='white' size={22}/></Link>
 
                 </li>
                  

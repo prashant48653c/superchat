@@ -1,0 +1,130 @@
+
+.chatscreen{
+    height: 100%;
+    width: 100vw;
+    overflow-y: hidden;
+    background-color: var(--darkBlack);
+    font-family: 'General Sans', sans-serif !important;
+    color: #c3c3c2; 
+    position: relative;                                           
+}
+.rightbar{
+    max-height: 80vh;
+    position: relative;
+    overflow-y: auto;
+    
+}
+.rightbar p{
+    font-family: 'General Sans', sans-serif !important;
+
+}
+.friendlist{
+    background-color: var(--darkBlack);
+}
+.friendbox{
+    background-color: var(--lightBlack);
+    color: #c3c3c2;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+.friendbox:hover{
+    background-color: var(--hoverBlack);
+}
+.friendbox h6{
+    color: #eeeeee;
+}
+.mininav{
+    padding: 1rem 0;
+}
+.mininav h5{
+    font-weight: 600;
+   
+font-size: 2.5rem;
+}
+.mini-icon,.searchbar{
+    background-color: var(--lightBlack);
+    padding: 1rem;
+}
+.mini-icon:hover{
+    cursor: pointer;
+    background-color: var(--hoverBlack);
+}
+.searchbar input{
+    outline: none;
+    border: none;
+    background-color: var(--lightBlack);
+}
+.searchbar{
+    border: .1px solid transparent;
+
+}
+ .searchbar:hover{
+    border: .1px solid grey;
+ }
+ .ad-img{
+    max-height: 25rem;
+ }
+ .right-icons , .right-profiles{
+    background-color: var(--lightBlack);
+border-radius: 1.4rem;
+padding: 1.5rem;
+ }
+ .r-btn:hover{
+color: rgb(146, 146, 250);
+cursor: pointer;
+ }
+
+
+
+ /* Chat box area  */
+ .chatbox{
+  position: relative;
+   height: 80vh;
+    overflow-y: scroll;
+    background-color: var(--lightBlack);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    
+ }
+ .keyboard{
+    position: fixed;
+    top: 85%;
+    left: 27%;
+    background-color: var(--hoverBlack);
+ }.keyboard input{
+    background-color: var(--hoverBlack);
+font-size: 1.6rem;
+outline: none;
+border: none;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ /* Chat image  */
+ .img-message-container{
+    width: 100%;
+     max-height: 100%;
+     display: flex;
+ }
+ img{
+    max-width: 100%;
+    max-height: 100%;
+ }
+ .image-messege{
+    border-radius: 1rem;
+  width: fit-content;
+   height: fit-content;
+ }
+ .image-messege:hover{
+    opacity: .5;
+    cursor: pointer;
+ }
+ .pop-img{
+    background-color: var(--lightBlack);
+    border-radius: 1rem;
+ }
+ audio{
+    height: 4rem;
+ }
+ audio::-webkit-media-controls-panel {
+    background-color:#696868;
+  }
