@@ -20,7 +20,7 @@ const AdInTake = ({dataAdSlot,dataAdFormat,dataFullWidthResponsive}:adBanner) =>
     
   return (
     
-      <div className="ad-container">
+      <div className="ad-container overflow-x-hidden">
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}
@@ -32,7 +32,7 @@ const AdInTake = ({dataAdSlot,dataAdFormat,dataFullWidthResponsive}:adBanner) =>
         <div className="right-profiles flex flex-col justify-start">
           <h6 className='text-2xl font-semibold'>Ads</h6>
           <div className='py-2 rounded-3xl flex h-max items-center justify-start'>
-            <Image src='/ad.png' className='ad-img' height={200} width={300} alt='ad' />
+            {/* <Image src='/ad.png' className='ad-img' height={200} width={300} alt='ad' /> */}
           </div>
         </div>
       </div>

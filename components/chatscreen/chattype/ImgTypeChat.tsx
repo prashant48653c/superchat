@@ -11,8 +11,8 @@ const ImgTypeChat = () => {
   }
   return (
     <>
-         <div onClick={toggleImage} className="img-message-container p-4">
-      <Image className='image-messege' width={100} height={200} alt='image-message' src={'/ballon.jpg'} />
+         <div  className="img-message-container p-4">
+      <Image onClick={toggleImage} className='image-messege' width={100} height={200} alt='image-message' src={'/ballon.jpg'} />
     </div>
     {/* Conditional rendering of the popup */}
     {status && (

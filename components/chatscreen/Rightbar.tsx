@@ -29,11 +29,11 @@ const Rightbar = () => {
         </div>
         <div className='gap-2 py-2 my-2 rounded-3xl flex items-center justify-start '>
           <MdAccountCircle size={30}/>
-          <p className='text-md'>Michal Jilion</p>
+          <p className='text-md'>Shrey Gupta</p>
         </div>
         <div className='gap-2 py-2 my-2 rounded-3xl flex items-center justify-start '>
           <MdAccountCircle size={30}/>
-          <p className='text-md'>Michal Jilion</p>
+          <p className='text-md'>San Lee</p>
         </div>
 
         </div>

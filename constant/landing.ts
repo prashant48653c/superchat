@@ -1,6 +1,6 @@
 
 export const links=[
-    'Products','Services','हिन्दी','Developer'
+    'Products','Services','हिन्दी',
 ]
 export const whyDetails=[
     {head:'Optimized chat',para:'Better performance with optimized chat support',icon:'/rocket.gif'},

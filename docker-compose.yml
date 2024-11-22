@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Map container's port to the host
+    volumes:
+      - .:/app # Sync code changes between host and container
+      - /app/node_modules # Avoid syncing node_modules for performance
+    environment:
+      - NODE_ENV=development
+      
+    command: npm run dev

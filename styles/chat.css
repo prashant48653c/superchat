@@ -1,6 +1,6 @@
 
 .chatscreen{
-    height: 100%;
+    min-height: 100vh;
     width: 100vw;
     overflow-y: hidden;
     background-color: var(--darkBlack);
@@ -84,6 +84,7 @@ cursor: pointer;
     background-color: var(--lightBlack);
     border-radius: 2rem;
     padding: 1.5rem;
+    padding-bottom: 8rem;
     
  }
  .keyboard{

@@ -14,7 +14,9 @@ const Navbar = () => {
         links.map((item)=>{
             return <li  key={item}>{item}</li>
         })
+        
     }
+    <li  ><a href="https://prashant1.netlify.app/">Developer</a></li>
 </ul>
 
 
