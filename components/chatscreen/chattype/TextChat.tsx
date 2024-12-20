@@ -11,7 +11,7 @@ return (
 </div>
 <div className="flex pl-2  flex-col  gap-3">
 <h5 className='text-2xl font-semibold max-w-full'>Conner Garcia</h5>
-<p >I hope this message finds you in great health and spirits. I’ve been thinking about you a lot lately, and I felt the urge to put my thoughts into words. </p>
+<p>I hope this message finds you in great health and spirits. Ive been thinking about you a lot lately, and I felt the urge to put my thoughts into words. </p>
 </div>
 <div>
 <p className="time w-20">6:00 pm</p>

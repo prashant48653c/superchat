@@ -1,15 +1,9 @@
-'use client'
 import Image from 'next/image'
 import React from 'react'
- 
-
-const FriendBox = () => {
-    const handleConnection=async ()=>{
-        //Setup connection between main user and this user/friend
-    }
-
-return (
-<div onClick={handleConnection} className='flex friendbox mt-5 gap-3 p-3 py-4 m-2 rounded-3xl items-center border border-black relative'>
+import '@/styles/chat.css'
+const AiBox = () => {
+  return (
+    <div className='flex   aibox mt-5 gap-3 p-3 py-4 m-2 rounded-3xl items-center border border-black relative'>
 
     <div className="absolute top-3 left-0 w-8 h-8 flex items-center justify-center bg-red-600 rounded-full">
         <b className=' font-extrabold text-sm text-white'>1</b>
@@ -20,13 +14,13 @@ return (
 
 
 
-<Image src={'/pp.jpg'} width={100} height={100} className='pp' alt='profile-picture' />
+<Image src={'/jenny.avif'}  width={100} height={100} className='pp object-cover' alt='profile-picture' />
 <div className="flex mes-detail flex-col justify-start ">
-    <h6>Richard Wilson </h6>
+    <h6 className='font-semibold'>Jenny Organo </h6>
     <p className='text-[1rem] '>I will be adding you soon to the meetin...</p>
 </div>
 </div>
-)
+  )
 }
 
-export default FriendBox
+export default AiBox

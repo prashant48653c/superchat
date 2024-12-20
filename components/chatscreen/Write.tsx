@@ -12,7 +12,7 @@ const Write = () => {
 
   return (
 
-   <div className="keyboard relative flex w-[60rem] gap-8 p-4 rounded-3xl  items-center justify-between px-4">
+   <div className="keyboard border  border-red-900  flex  gap-8 p-4 rounded-3xl  items-center justify-between px-4">
 <input placeholder='Your text' type="text"className='w-[60%] px-3  '/>
 <div className='flex items-center justify-center gap-5'>
 <IoGiftOutline onClick={()=>setGifStatus(!gifStatus)} title='Gif' size={20}/>

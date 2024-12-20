@@ -13,24 +13,24 @@ import Write from './Write'
 const ChatBox = () => {
   return (
     <section className='chatbox overflow-y-auto relative flex w-[75%] h-full gap-4 flex-col '>
-      
+<TextChat />
 
-   <ImgTypeChat/>
-   <VoiceTypeChat/>
- <TextChat/>
- <TextChat/>
-
- 
-<Alert/>
-<TextChat/>
-<TextChat/>
-
-<Alert/>
- 
+      <ImgTypeChat />
+      <VoiceTypeChat />
+      <TextChat />
+      <TextChat />
+      <Alert />
+      <TextChat />
+      <TextChat />
+      <Alert />
 
 
 
-<Write/>
+      <div className="w-full h-[5rem] relative flex border border-lime-900 items-center justify-center">
+
+        <Write />
+
+      </div>
 
 
 

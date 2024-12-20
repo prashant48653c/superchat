@@ -4,17 +4,22 @@ import FriendList from '@/components/chatscreen/FriendList'
 import MiniNav from '@/components/chatscreen/MiniNav'
 import ChatBox from '@/components/chatscreen/ChatBox'
 import Rightbar from '@/components/chatscreen/Rightbar'
-import WholeChatBar from '@/components/chatscreen/WholeChatBar'
-const ChatScreen = () => {
+const AiChatScreen = () => {
   return (
     <main className='chatscreen p-6 rounded-md gap-10 h-full w-full flex justify-start'>
        <FriendList/>
 
-      <WholeChatBar/>
+       <section className="chat-nav  w-full ">
+        <MiniNav/>
+        <section className="chat-rightbar mt-4 w-full flex gap-4 justify-between ">
+            <ChatBox/>
+            <Rightbar/>
+        </section>
+       </section>
 
 
     </main>
   )
 }
 
-export default ChatScreen
+export default AiChatScreen

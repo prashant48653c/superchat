@@ -6,6 +6,7 @@ import { RiAccountCircleLine } from 'react-icons/ri'
 import SettingMenu from '../menus/SettingMenu'
 import NotificationMenu from '../menus/NotificationMenu'
 import { useState } from 'react'
+import Image from 'next/image'
 
 const MiniNav = () => {
   const[notificationStatus,setNotificationStatus]=useState(false);
@@ -14,6 +15,7 @@ const MiniNav = () => {
   return (
     <nav className='mininav flex items-center justify-between w-full'>
         <h5>Jonathan Wilson</h5>
+        <Image className='receiver-pp' alt='receiver picture' src={'/pp.jpg'} width={50} height={50}/>
         <div className="menu flex items-center justify-center gap-6  ">
 
             <div className='searchbar rounded-full flex gap-3 items-center justify-center'>
@@ -37,7 +39,7 @@ const MiniNav = () => {
         <b className=' font-extrabold text-sm text-white'>1</b>
     </div>
             </div>
-            <div title='Account' className="mini-icon rounded-full">
+            <div title='Account' className="mini-icon account-icon rounded-full">
                 <RiAccountCircleLine size={20}/>
             </div>
 
