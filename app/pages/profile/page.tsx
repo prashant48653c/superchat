@@ -9,7 +9,7 @@ const page = () => {
      
         <div className="profile-section  ">
             <div className="profile-images relative w-full">
-            <Image width={200} height={200} className='w-[100vw] rounded-3xl h-[25rem]' alt='cover-image' src={'/ballon.jpg'}/>
+            <Image width={200} height={200} className='w-[100vw] rounded-3xl object-cover h-[25rem]' alt='cover-image' src={'/ballon.jpg'}/>
                 <div className='w-[15rem] absolute bottom-[-7rem] left-[2rem] h-[15rem] rounded-full border-[.6rem] border-lime-50  overflow-hidden'>
                 <Image className='rounded-full' width={150} height={150} alt='profile-image' src={'/pp.jpg'}/>
                 </div>

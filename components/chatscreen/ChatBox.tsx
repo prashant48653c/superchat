@@ -1,5 +1,5 @@
 
-import React from 'react'
+ 
 import { BiSend } from 'react-icons/bi'
 import ImgTypeChat from './chattype/ImgTypeChat'
 import VoiceTypeChat from './chattype/VoiceTypeChat'

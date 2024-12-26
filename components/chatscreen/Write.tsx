@@ -5,11 +5,23 @@ import VoiceRecorder from '../media/Voice'
 import { IoGiftOutline } from 'react-icons/io5'
 import Gif from '../media/Gif'
 import { useState } from 'react'
+import axios from 'axios'
+ 
 
 const Write = () => {
   const[gifStatus,setGifStatus]=useState(false);
   const[galleryStatus,setGalleryStatus]=useState(false);
 
+
+  const askAI=async (prompt:string)=>{
+    const res = await axios.post('http://localhost:9000', { prompt }, {
+        headers: { 'Content-Type': 'application/json' },
+    });
+    console.log(res);
+}
+
+
+  // askAI('who is current pm of nepal');
   return (
 
    <div className="keyboard border  border-red-900  flex  gap-8 p-4 rounded-3xl  items-center justify-between px-4">
