@@ -2,6 +2,7 @@ import React from 'react'
 import '../../styles/landing.css'
 import Image from 'next/image'
 import { whyDetails } from '@/constant/landing'
+import Link from 'next/link'
 
 const arr=['/vid.mp4','/vis.mp4']
 const Hero = () => {
@@ -17,17 +18,17 @@ return (
 <div className="reviews">
 <div className="review">
 ⭐⭐⭐⭐⭐
-<i>"Better then Whatsapp fr!"</i>
+<i>{"Better then Whatsapp fr!"}</i>
 </div>
 
 <div className="review">
 ⭐⭐⭐⭐⭐
-<i>"Better then Discord tbh!"</i>
+<i>{"Better then Discord tbh!"}</i>
 </div>
 
 <div className="review">
 ⭐⭐⭐⭐⭐
-<i>"Better then Slack too!"</i>
+<i>{"Better then Slack too!"}</i>
 </div>
 </div>
 
@@ -47,8 +48,10 @@ in one organized place.
 <b>100% free of cost</b>
 
 </div>
-
+<Link href={'/signup'}>
 <button className="btn">Get Started</button>
+</Link>
+
 </section>
 
 
@@ -63,7 +66,7 @@ whyDetails.map((item,i)=>{
 return(
 
 <div  key={i}  className="why-box w-full flex flex-col text-center items-center justify-between">
-<Image src={item.icon} alt='why-image' height={100} width={100} />
+<Image unoptimized src={item.icon} alt='why-image' height={100} width={100} />
 <h6>{item.head}</h6>
 <p>{item.para} </p>
 </div>
@@ -81,7 +84,7 @@ return(
 
 {/* reviews  */}
 <section className="why w-full  text-center">
-<h5  className='heading'>Don't take our word for it though ...
+<h5  className='heading'>Don{"'"}t take our word for it though ...
 </h5>
 <p>See how people consider <b>SuperChat</b> to get closer to their alumni
 
@@ -94,8 +97,8 @@ return(
 <div  key={i}  className="why-box w-[48%] flex flex-col text-center items-center justify-between">
 
 
-      <video className='mx-8 rounded-md h-[30rem]' controls>
-        <source src={item} type="video/mp4"/>
+      <video autoPlay className='mx-8 rounded-md h-[30rem]' controls>
+        <source  src={item} type="video/mp4"/>
         Your browser does not support the video tag.
       </video>
 

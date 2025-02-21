@@ -1,14 +1,15 @@
  'use client'
+import AdInTake from '@/adcomponent/AdInTake'
+import { useRouter } from 'next/navigation'
 import React from 'react'
-import { FaMicrophone, FaPhone, FaStream, FaVideo } from 'react-icons/fa'
+import {  FaPhone, FaStream, FaVideo } from 'react-icons/fa'
 import { MdAccountCircle } from 'react-icons/md'
+import { RiAccountCircleLine } from 'react-icons/ri'
  
- import dynamic from 'next/dynamic'
  
-  const AdInTake = dynamic(() => import('../../adcomponent/AdInTake'), { ssr: false })
-
 
 const Rightbar = () => {
+  const router=useRouter()
   return (
     <section className='rightbar flex w-[25%]  overflow-y-auto flex-col gap-3'>
         <div className="right-icons p-4 flex   justify-evenly items-center">
@@ -19,8 +20,8 @@ const Rightbar = () => {
           <div className="mini-icon">
           <FaVideo title='Video Call' className='r-btn' size={20}/>
           </div>
-          <div className="mini-icon">
-          <FaStream className='r-btn' size={20}/>
+          <div onClick={()=>router.push('/pages/profile')} className="mini-icon">
+          <RiAccountCircleLine className='r-btn' size={20}/>
 
 
           </div>

@@ -94,4 +94,9 @@ h1,h2,h3,h4,h5,h6{
   background: #333333; /* Darker color on hover */
 }
 
+.driver-popover-title,.driver-popover,.driver,.driver-popover-description,#driver-popover-content{
+  color: whitesmoke;
+  background-color: #232020;
+}
+
  

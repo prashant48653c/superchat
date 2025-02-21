@@ -1,8 +1,15 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import React, { useState } from 'react';
-import { ReactMediaRecorder } from 'react-media-recorder';
+ 
 import { IoMicOutline, IoMicOffOutline } from 'react-icons/io5';
+
+const ReactMediaRecorder = dynamic(() =>
+  import('react-media-recorder').then((mod) => mod.ReactMediaRecorder),
+  { ssr: false }
+);
+// mod is an object and we want ReactMediaRecorder which is a key inside the object so after import mod gets tha object and we set variable ReactMediaRecorder to mod.ReactMediaRecorder.
 
 const VoiceRecorder: React.FC = () => {
   const [isRecording, setIsRecording] = useState(false);
