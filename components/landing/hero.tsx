@@ -3,16 +3,18 @@ import '../../styles/landing.css'
 import Image from 'next/image'
 import { whyDetails } from '@/constant/landing'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 const arr=['/vid.mp4','/vis.mp4']
 const Hero = () => {
+  const t=useTranslations('home')
 return (
 <main className='landing '>
 
 <section className="hero">
 <div className="header-text">
 <div className="badge">New</div>
-<p>AI powered chat application</p>
+<p>{t('ai')}</p>
 </div>
 
 <div className="reviews">
@@ -32,7 +34,7 @@ return (
 </div>
 </div>
 
-<h1 className='header my-4'>Better and slimpified way to chat with love and joy.</h1>
+<h1 className='header my-4'>{t('title')}</h1>
 
 <div className="tags">
 <p> All yours

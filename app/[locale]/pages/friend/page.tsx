@@ -1,3 +1,4 @@
+
 import FriendScreen from '@/components/profile/FriendScreen'
 import React from 'react'
 

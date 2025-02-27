@@ -16,6 +16,7 @@ const Navbar = () => {
         })
         
     }
+    
     <li  ><a href="https://prashant1.netlify.app/">Developer</a></li>
 </ul>
 
