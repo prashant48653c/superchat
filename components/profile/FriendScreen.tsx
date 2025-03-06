@@ -30,6 +30,8 @@ const FriendScreen = () => {
       sendTokenToServer(token)
     })
   },[])
+
+  
   const sendFriendRequest=async()=>{
     const res=await axiosInstance.post('/auth/sendNotification',{token,message:"Prashant send you a friend request",toId:Number(11),fromId:Number(10)})
     console.log(res)

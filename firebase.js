@@ -1,6 +1,9 @@
 import { initializeApp } from "firebase/app";
 import { getMessaging, getToken, onMessage, isSupported } from "firebase/messaging";
 
+
+
+//! Make this file a react compoenet and store the notification in state or localstorage;;
 const firebaseConfig = {
   apiKey: "AIzaSyBAIX8vEqJk0oWMiPeSs_dvX6MAJe77QZo",
   authDomain: "movieapp-f8c83.firebaseapp.com",
@@ -16,6 +19,7 @@ const app = initializeApp(firebaseConfig);
 
 let messaging;
 isSupported().then((supported) => {
+  // console.log("Asking for notification permission...")
   if (supported) {
     messaging = getMessaging(app);
     console.log("Firebase Messaging is supported!");
@@ -31,9 +35,9 @@ export const requestNotificationToken = async () => {
     return null;
   }
   try {
-    const sendKey = "BI3OEeEep0zSSOzvjaUALV-H_p5PmlSur8Qy0bkJ7-aOg0cM6z9oo6KpRwv3Rb8qzkoLlU-dP96nMbI2W3rHkxU";
+    const vapidKey = "BI3OEeEep0zSSOzvjaUALV-H_p5PmlSur8Qy0bkJ7-aOg0cM6z9oo6KpRwv3Rb8qzkoLlU-dP96nMbI2W3rHkxU";
     console.log("Requesting FCM token...");
-    const token = await getToken(messaging, { vapidKey: sendKey });
+    const token = await getToken(messaging, { vapidKey: vapidKey });
     if (token) {
       console.log("FCM Token:", token);
       return token;
