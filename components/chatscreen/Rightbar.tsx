@@ -1,8 +1,8 @@
  'use client'
 import AdInTake from '@/adcomponent/AdInTake'
-import { useRouter } from 'next/navigation'
+import { useRouter } from "@/i18n/routing";
 import React from 'react'
-import {  FaPhone, FaStream, FaVideo } from 'react-icons/fa'
+import {  FaPhone,  FaVideo } from 'react-icons/fa'
 import { MdAccountCircle } from 'react-icons/md'
 import { RiAccountCircleLine } from 'react-icons/ri'
  

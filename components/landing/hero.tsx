@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/landing.css'
 import Image from 'next/image'
 import { whyDetails } from '@/constant/landing'
-import Link from 'next/link'
+import {Link} from "@/i18n/routing";
 import { useTranslations } from 'next-intl'
 
 const arr=['/vid.mp4','/vis.mp4']
@@ -50,7 +50,7 @@ in one organized place.
 <b>100% free of cost</b>
 
 </div>
-<Link href={'/signup'}>
+<Link href={'/pages/signup'}>
 <button className="btn">Get Started</button>
 </Link>
 

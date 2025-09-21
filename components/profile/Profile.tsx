@@ -1,7 +1,10 @@
+'use client'
+import axiosInstance from '@/utils/axiosInstance'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Profile = () => {
+ 
   return (
     <div className="profile-box bg-slate-800 flex items-center flex-col   rounded-xl p-4 w-[20rem]">
         <Image width={70} height={70 } className='rounded-lg' alt='profile' src={'/pp.jpg'} />

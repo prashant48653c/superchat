@@ -7,15 +7,18 @@ import SettingMenu from "../menus/SettingMenu";
 import NotificationMenu from "../menus/NotificationMenu";
 import { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
+import useUserStore from "@/store/userStore";
 
 const MiniNav = () => {
+  const { activeUser } = useUserStore();
+console.log(activeUser)
   const [notificationStatus, setNotificationStatus] = useState(false);
   const [settingStatus, setSettingStatus] = useState(false);
 const router=useRouter()
   return (
     <nav className="mininav flex items-center justify-between w-full">
-      <h5>Jonathan Wilson</h5>
+      <h5>{activeUser?.fullName || "Click to chat"}</h5>
       <Image
         className="receiver-pp"
         alt="receiver picture"

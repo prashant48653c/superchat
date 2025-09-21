@@ -1,45 +1,42 @@
- 'use client'
+"use client";
+import useUserStore from "@/store/userStore";
 import axiosInstance from "@/utils/axiosInstance";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link } from "@/i18n/routing";
+import { useRouter } from "@/i18n/routing";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
 const Login = () => {
-    interface FormData {
-        
-        email: string;
-        password: string;
-      }
-    
-      const router = useRouter();
-      const [formData, setFormData] = useState<FormData>({
-       
-        email: "",
-        password: "",
-      });
-    
-      const handleLogin = async (e: React.FormEvent) => {
-        e.preventDefault();
-        const toastId = toast.loading("Logging in...");
-        console.log("first");
-        try {
-          const res = await axiosInstance.post("/auth/login", formData);
-    
-          toast.dismiss(toastId);
-          toast.success("Login successful!");
-    
-          setTimeout(() => {
-            router.push("/pages/chat");
-          }, 3000);
-    
-          console.log(res.data);
-        } catch (error) {
-          toast.dismiss(toastId);
-          toast.error("Login failed. Please try again.");
-          console.log(error);
-        }
-      };
+  const { setUser } = useUserStore();
+
+  interface FormData {
+    email: string;
+    password: string;
+  }
+
+  const router = useRouter();
+  const [formData, setFormData] = useState<FormData>({
+    email: "",
+    password: "",
+  });
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const toastId = toast.loading("Logging in...");
+  
+    try {
+      const res = await axiosInstance.post("/auth/login", formData);
+toast.success("Login successful!", { id: toastId });
+      setUser(res.data.data);
+      const id = res.data.data.userId;
+      console.log(id);
+      router.push("/pages/chat");
+      localStorage.setItem("userId", id);
+    } catch (error) {
+      toast.error("Login failed. Please try again.", { id: toastId });
+      console.log(error);
+    }
+  };
   return (
     <section className="signup w-full py-20 flex flex-col h-max border-green-500 border-1  items-center">
       <h6 className="text-5xl font-semibold my-7">Welcome back!</h6>
@@ -47,8 +44,6 @@ const Login = () => {
         onSubmit={handleLogin}
         className="form flex flex-col gap-6 items-center"
       >
-        
-
         <div className="input-item flex items-start flex-col">
           <label className="invisible" htmlFor="email">
             Enter your email
@@ -84,7 +79,7 @@ const Login = () => {
         </div>
 
         <button type="submit" className="btn my-5 mb-9">
-          Sign up for free
+          Login
         </button>
       </form>
       <b>

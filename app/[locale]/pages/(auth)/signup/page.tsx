@@ -1,7 +1,7 @@
 "use client";
 import axiosInstance from "@/utils/axiosInstance";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import {Link} from "@/i18n/routing";
+import { useRouter } from "@/i18n/routing";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -30,7 +30,7 @@ const Signup = () => {
       toast.success("Signup successful!");
 
       setTimeout(() => {
-        router.push("/pages/chat");
+        router.push("/pages/login");
       }, 3000);
 
       console.log(res.data);

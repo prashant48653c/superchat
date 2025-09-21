@@ -1,6 +1,6 @@
 'use client'
 import { ComponentWithGeolocation } from '@/components/utils/LocationTrack'
-import { useRouter } from 'next/navigation'
+import { useRouter } from "@/i18n/routing";
 import React, { useState } from 'react'
  
 import { IoCallOutline } from 'react-icons/io5'
@@ -17,7 +17,7 @@ const LocationAlert = () => {
         <p><b>Bikash Shrestha</b> started a video call.</p>
       </div>
       <div className="mini-icon rounded-full">
-                <MdFullscreen onClick={()=>setStatus(!status)} title='Join' size={18}/>
+                <MdFullscreen  title='Join' size={18}/>
             </div>
           
     </div>

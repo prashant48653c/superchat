@@ -1,16 +1,20 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaUserFriends } from "react-icons/fa";
 import { motion } from "motion/react";
+import axiosInstance from "@/utils/axiosInstance";
 
-const page = () => {
-  const getData = async () => {
-    const res = await fetch("http://localhost:4000");
-    const data = await res.json();
-    console.log(data);
-  };
-  getData();
+const Page = () => {
+  const [profile, setProfile] = useState<any>(null);
+   const getUser=async()=>{
+     const id =localStorage.getItem("userId");
+     if(!id) return;
+     const res=await axiosInstance.get(`/user/single/${id}`);
+     setProfile(res.data)
+     console.log(res)
+   }
+   useEffect(()=>{getUser()},[]);
   const images = [1, 2, 3, 4, 5, 6];
   return (
     <section className="text-white h-min-full friend-screen p-4 relative bg-foreground w-full ">
@@ -46,7 +50,7 @@ const page = () => {
         </div>
 
         <div className="intro px-[2rem] mt-[10rem] flex flex-col gap-2">
-          <h3 className="text-3xl font-semibold">Prashant Acharya</h3>
+          <h3 className="text-3xl font-semibold">{profile?.fullName}</h3>
           <p>Hello EveryOne! I enjoy playing video games.❤️😁</p>
         </div>
 
@@ -92,4 +96,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

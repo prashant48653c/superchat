@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import {Link} from "@/i18n/routing";
 import React from 'react'
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { FiExternalLink } from 'react-icons/fi'
